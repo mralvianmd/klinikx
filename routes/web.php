@@ -98,4 +98,10 @@ Route::post('/fill-resep-obat', 'TransaksiController@fill_resep_obat')->name('fi
 Route::post('/bayar-obat', 'TransaksiController@bayar_obat')->name('bayar.obat');
 // ----------------------------------End Transaksi Controller
 
+// ----------------------------------Begin Monitoring Controller
+Route::get('/monitoring-obat', 'MonitoringController@index_obat')->name('mon.monitoring.obat');
+Route::post('/monitoring-get-obat', 'MonitoringController@get_obat')->name('mon.get.obat');
+Route::get('/monitoring-pasien', 'MonitoringController@index_pasien')->name('mon.monitoring.pasien');
+
+// ----------------------------------End Monitoring Controller
 

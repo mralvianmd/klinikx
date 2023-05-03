@@ -22,6 +22,22 @@
                 <div class="navbar-nav w-100">
                     <a href="{{route('klinik')}}" @if(substr(Route::current()->getName(),0,6) == 'klinik')  class="nav-item nav-link active" @else  class="nav-item nav-link" @endif><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
+                        <a href="#" @if(substr(Route::current()->getName(),0,4) == 'mon.') class="nav-link dropdown-toggle active" @else class="nav-link dropdown-toggle" @endif data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Monitoring</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            @for($i=0;$i<count($all_menu);$i++)
+                                @if(substr($all_menu[$i]->menu_id,0,3) == 'MON')
+                                    <!-- Begin Validate -->
+                                    @for($j=0;$j<count($user_menu);$j++)
+                                        @if($user_menu[$j] == $all_menu[$i]->menu_id)
+                                            <a href="{{route($all_menu[$i]->route)}}" class="dropdown-item {{ Route::is($all_menu[$i]->route) ? 'active' : '' }}">{{$all_menu[$i]->deskripsi}}</a>
+                                        @endif
+                                    @endfor
+                                    <!-- End Validate -->
+                                @endif
+                            @endfor
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
                         <a href="#" @if(substr(Route::current()->getName(),0,3) == 'tr.') class="nav-link dropdown-toggle active" @else class="nav-link dropdown-toggle" @endif data-bs-toggle="dropdown"><i class="far fa-keyboard me-2"></i>Transaksi</a>
                         <div class="dropdown-menu bg-transparent border-0">
                             @for($i=0;$i<count($all_menu);$i++)
