@@ -349,7 +349,7 @@ class TransaksiController extends Controller
             $find_last_antrian = Antrian::whereDate('created_at',date('Y-m-d'))->orderBy('id','desc')->first();
             $find_AN0_self_antrian = Antrian::whereDate('created_at',date('Y-m-d'))
             ->where('pasien_id',$find_pasien->id)
-            ->whereIn('status_antrian',['AN0','AN1','AN2'])
+            ->whereIn('status_antrian',['AN0','AN1'])
             ->orderBy('id','desc')
             ->first();
 

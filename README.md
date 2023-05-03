@@ -24,6 +24,8 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 ## About Developer
 KlinikX made by @alvianmd (Instagram)
 
+Sampling Screenshot and Table
+https://drive.google.com/drive/folders/1NGy7VpzoYlbYCpFBJ7HC01UsNdmx15aj?usp=sharing
 
 ## License
 
