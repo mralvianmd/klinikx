@@ -276,6 +276,10 @@
     function reset_periksa_tindakan()
     {
         array_periksa_tindakan = [];
+        while (array_periksa_tindakan.length > 0) {
+            a.pop();
+        } // Fastest
+        x = 0;
         toastr.success("Reset tindakan", "Sukses");
         display_periksa_tindakan();
     }
@@ -284,6 +288,14 @@
     {
         array_periksa_obat = [];
         array_periksa_obat_qty = [];
+        while (array_periksa_obat.length > 0) {
+            a.pop();
+        } // Fastest
+        while (array_periksa_obat_qty.length > 0) {
+            a.pop();
+        } // Fastest
+        x2 = 0;
+        x3 = 0;
         toastr.success("Reset obat dan jumlah obat", "Sukses");
         display_periksa_obat();
     }

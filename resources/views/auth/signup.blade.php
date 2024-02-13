@@ -83,7 +83,7 @@
                             </div>
                             
                             <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign Up</button>
-                            <p class="text-center mb-0">Sudah punya akun? <a href="">Sign In</a></p>
+                            <p class="text-center mb-0">Sudah punya akun? <a href="{{route('signin')}}">Sign In</a></p>
                         </form>
                     </div>
                 </div>

@@ -77,7 +77,7 @@
                                 <a href="">Forgot Password</a>
                             </div> -->
                             <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign In</button>
-                            <p class="text-center mb-0">Belum punya akun? <a href="">Sign Up</a></p>
+                            <p class="text-center mb-0">Belum punya akun? <a href="{{route('signup')}}">Sign Up</a></p>
                         </form>
                     </div>
                 </div>

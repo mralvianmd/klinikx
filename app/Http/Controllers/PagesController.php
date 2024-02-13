@@ -69,7 +69,7 @@ class PagesController extends Controller
                 'b.obat',
                 DB::raw('sum(a.qty_out) as qty_out'),
                 DB::raw('sum(a.qty_in) as qty_in'),
-                DB::raw('sum(b.qty) as qty'),
+                DB::raw('(b.qty) as qty'),
                 )
             ->groupBy('a.obat_id','b.obat')
             ->orderBy('b.qty','desc')
